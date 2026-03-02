@@ -33,7 +33,7 @@ class Br {
                 'User-Agent': 'okhttp/4.9.2',
                 'Content-Type': 'application/json',
                 'X-Application-Context': 'application:prod:8080',
-                'X-OneAgent-JS-Injection': true,
+                'X-OneAgent-JS-Injection': String(true),
                 'X-XSS-Protection': '1; mode=block',
             }, null);
 
