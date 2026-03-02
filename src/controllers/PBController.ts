@@ -27,7 +27,7 @@ class PB {
         const browser = await puppeteer.launch({
             headless: process.env.NODE_ENV === 'production' ? 'new' : false,
             slowMo: process.env.NODE_ENV === 'production' ? 0 : 50,
-            timeout: 10000,
+            timeout: 35000,
             args: [
                 '--no-sandbox',
                 '--disable-setuid-sandbox',
