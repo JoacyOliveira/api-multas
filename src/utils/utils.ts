@@ -65,7 +65,7 @@ class Utils {
         const response = await axios.request({
             url,
             method,
-            header,
+            headers: header,
             data: body
         });
 
