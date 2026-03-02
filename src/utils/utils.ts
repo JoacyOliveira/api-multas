@@ -57,20 +57,25 @@ class Utils {
      * @param {object} [body] - The request body.
      * @returns {Promise<any>} - A Promise that resolves with the response data.
      */
-    async request(url, method = 'POST', header = {
+    async request(
+    url: string,
+    method: string = 'POST',
+    header: Record<string, string> = {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         'User-Agent': 'Detran-PI Scraper'
-    }, body = {}) {
-        const response = await axios.request({
-            url,
-            method,
-            headers: header,
-            data: body
-        });
+    },
+    body: any = {}
+) {
+    const response = await axios.request({
+        url,
+        method,
+        headers: header,
+        data: body
+    });
 
-        return response.data;
-    }
+    return response.data;
+}
 
     /**
      * Sends an HTTP request to a specified URL using the provided method, headers, and body.
